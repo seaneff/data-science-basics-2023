@@ -7,11 +7,9 @@ Don't worry if you run into issues! We will set aside some time to resolve any i
 ### Install R
 
 Download R [here](https://cran.r-project.org/).
-
-Depending on the operating system you are using, you can select to download R for "macOS" or "Windows" and follow the directions on the CRAN site.
+If you'd like some additional help, please see the online book ["An Introduction to R"](https://intro2r.com/install_r.html).
 
 ### Install RStudio Desktop
 
 Download RStudio Desktop [here](https://posit.co/download/rstudio-desktop/#download).
-
-Depending on the operating system you are using, you can select to download RStudio for "macOS" or "Windows" and follow the directions on the CRAN site.
+If you'd like some additional help, please see the online book ["An Introduction to R"](https://intro2r.com/installing-rstudio.html).

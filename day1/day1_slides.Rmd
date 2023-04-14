@@ -1,0 +1,158 @@
+---
+title: "Intro to Statistical Programming"
+output: ioslides_presentation
+date: "Day 1, Data Science Basics in R Workshop"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## What is statistical programming?
+In-class discussion.
+
+## Why should I care?
+In-class discussion.
+
+## Let's take a break
+
+## Getting acquainted with R Studio
+In-class demo.
+
+## Let's take a break
+
+## R Basics
+
+## Objects
+An R object is the primary unit of "stuff" within R. 
+
+An object could be:
+
+  - a single number
+  - a single word
+  - a dataset
+  - an entire policy document or set of documents
+  - (among others)
+  
+## Create on object
+
+To create an object in R, give it a name and assign it a value.
+
+```{r object, echo = TRUE}
+my_first_object <- 3.14
+```
+
+```{r objectprint, echo = TRUE}
+my_first_object
+```
+
+## Data types
+
+We will focus primarily on three related data types in this workshop: 
+
+  - **numeric data:** numbers (e.g., -1.2, 0, 18)
+  - **character:** strings of text (e.g., "malaria", "UNAIDS")
+  - **logical:** TRUE or FALSE
+  
+## Numeric data
+
+```{r numeric, echo = TRUE}
+class(-1.2)
+```
+
+```{r numeric2, echo = TRUE}
+class(c(-87.3, 8, 0))
+```
+
+## Character data
+
+```{r character, echo = TRUE}
+class("malaria")
+```
+
+```{r character2, echo = TRUE}
+class(c("International Health Regulations", "UNAIDS", "34.2"))
+```
+
+## Logical data
+
+```{r logical, echo = TRUE}
+class(TRUE)
+```
+
+```{r logical2, echo = TRUE}
+class(FALSE)
+```
+  
+## Check your understanding
+
+What type of data is this?
+```{r test1, echo = TRUE, results = "hide"}
+class(89.1)
+```
+
+## Check your understanding
+
+What type of data is this?
+```{r test1answer, echo = TRUE}
+class(89.1)
+```
+
+## Data structures
+
+We will focus primarily on two related data structures in this workshop: 
+
+  - **vector:** a group of observations of a single data type
+  - **data frames:** a data set made out of rows and columns that can contain different types of data 
+  
+## Vectors
+
+```{r, echo = TRUE}
+my_vector_numeric <- c(1, 43, -8, 9.26)
+my_vector_numeric
+```
+
+```{r, echo = TRUE}
+is(my_vector_numeric)
+```
+
+## Vectors
+
+```{r, echo = TRUE}
+my_vector_character <- c("Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda")
+my_vector_character
+```
+
+```{r, echo = TRUE}
+is(my_vector_character)
+```
+
+## Data frames
+
+  - Data frames are like "data sets"
+  - Rows and columns of data
+  - Often loaded from a file or from a website
+
+## Data frames
+
+```{r, echo = TRUE}
+strep_tb <- read.csv("https://raw.githubusercontent.com/higgi13425/medicaldata/master/data-raw/strep_tb.csv")
+```
+
+```{r, echo = TRUE}
+head(strep_tb[,1:6])
+```
+## Data frames contain vectors
+
+```{r, echo = TRUE}
+strep_tb$gender
+```
+```{r, echo = TRUE}
+is(strep_tb$gender)
+```
+
+## Acknowledgements and References
+
+[Douglas, A et al. "An Introduction to R"](https://intro2r.com/). 
+This free online book is a great resource to review if you are interested in learning more.
+

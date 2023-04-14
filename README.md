@@ -43,16 +43,14 @@ No prior programming experience is necessary for this course, though to follow a
 
 # References and other great resources
 
-[Posit (formerly R Studio) cheatsheets](https://posit.co/resources/cheatsheets/)
-[UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)
-[Master the Tidyverse (RStudio)] (https://github.com/rstudio/master-the-tidyverse)
 
-
-| Day   |          Topic                          |     Materials 
-|:----:|:----------------------------------:|:----------------:|
-|  1   | What is statistical programming?   |     [Lesson 1] |
-|  4   | Other    |     [Lesson 1] |
-
+| Day   |          Topic                               |     Materials 
+|:----: |:---------------------------------    -------:|:-------------------------------------------------------------------------------------:|
+|  1    | R Basics: An Introduction to R (online book) | [Intro2R](https://intro2r.com/)                                                       |
+|  3    | Fun with ggplot2: ggplot2 cheatsheet          | [Posit (formerly R Studio) cheatsheets](https://posit.co/resources/cheatsheets/)      |
+|  4    | Learning more: UNR R Workshop                 | [UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)  |
+|  4    | Learning more: Master the Tidyverse           | [Master the Tidyverse (RStudio)] (https://github.com/rstudio/master-the-tidyverse)    |
+ 
 
 
 
