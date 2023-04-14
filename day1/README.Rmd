@@ -1,7 +1,6 @@
 ---
 title: "Untitled"
-output:
-  slidy_presentation: default
+output: github_document
 date: "2023-04-14"
 ---
 

@@ -47,6 +47,7 @@ No prior programming experience is necessary for this course, though to follow a
 
 [Posit (formerly R Studio) cheatsheets](https://posit.co/resources/cheatsheets/)
 [UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)
+[Master the Tidyverse (RStudio)] (https://github.com/rstudio/master-the-tidyverse)
 
 
 
