@@ -1,0 +1,50 @@
+---
+title: "What is statistical programming?"
+author: "(and why should I care?)"
+date: "Day 1, Data Science Basics in R Workshop"
+output:
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## 
+```{r, echo=FALSE}
+# Define variable containing url
+data_trap_url <- "https://imgs.xkcd.com/comics/data_trap.png"
+```
+<center><img src="`r data_trap_url`"></center>
+
+## 
+```{r, echo=FALSE}
+# Define variable containing url
+data_point_url <- "https://phdcomics.com/comics/archive/phd111914s.gif"
+```
+<center><img src="`r data_point_url`"></center>
+
+
+
+## Statistical programming
+
+## Why "statistical"?
+
+## Who uses statistical programming?
+
+## How does this apply to me?
+
+## Day to day 
+
+## What does it look like?
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
