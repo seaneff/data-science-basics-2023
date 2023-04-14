@@ -6,7 +6,7 @@ This workshop will build literacy and basic proficiency in statistical programmi
 
 This workshop is part of the [2023 Georgetown University Health Diplomacy Training Initiative](https://ghss.georgetown.edu/health-diplomacy-training-initiative/#) led by the [Center for Health Science and Security](https://ghss.georgetown.edu/). 
 
-No prior programming experience is necessary for this course, though to follow along with course materials, participants will require access to a laptop or computer.
+No prior programming experience is necessary for this course, though to follow along with course materials, participants will require access to a fully charged laptop or computer. 
 
 ---
 
@@ -46,6 +46,7 @@ No prior programming experience is necessary for this course, though to follow a
 # References and other great resources
 
 [Posit (formerly R Studio) cheatsheets](https://posit.co/resources/cheatsheets/)
+[UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)
 
 
 
