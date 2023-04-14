@@ -2,7 +2,6 @@
 title: "Untitled"
 output:
   slidy_presentation: default
-  ioslides_presentation: default
 date: "2023-04-14"
 ---
 
