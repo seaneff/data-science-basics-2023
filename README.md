@@ -21,7 +21,7 @@ No prior programming experience is necessary for this course, though to follow a
 ### Day 3: [Exploratory data analysis](https://raw.githubusercontent.com/LINKHERE)
 -   Descriptive statistics
 -   Data visualization
--   ggplot2
+-   Fun with ggplot2
 
 ### Day 4: [R in the real world](https://raw.githubusercontent.com/LINKHERE)
 -   Version control with github
