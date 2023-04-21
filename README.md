@@ -4,13 +4,14 @@ This workshop will build literacy and basic proficiency in statistical programmi
 
 This workshop is part of the [2023 Georgetown University Health Diplomacy Training Initiative](https://ghss.georgetown.edu/health-diplomacy-training-initiative/#) led by the [Center for Health Science and Security](https://ghss.georgetown.edu/). 
 
-No prior programming experience is necessary for this course, though to follow along with course materials, participants will require access to a fully charged laptop or computer. 
+No prior programming experience is necessary for this course, though to follow along with course materials, participants will require access to a fully charged laptop or computer. There are no required course materials or textbooks, though we will work together through select materials from the online [Intro to R](https://intro2r.com/) book developed by Alex Douglas, Deon Roos, Francesca Mancini, Ana Couto and David Lusseau.
 
 ---
 
 ### Before Course: [Getting set up](https://github.com/seaneff/data-science-basics-2023/tree/main/before_course)
 -   Install R
 -   Install RStudio Desktop
+
 ---
 
 ### Day 1: [Intro to statistical programming](https://github.com/seaneff/data-science-basics-2023/tree/main/day1)
@@ -45,11 +46,12 @@ No prior programming experience is necessary for this course, though to follow a
 
 
 | Day   |          Topic                               |     Materials 
-|:----: |:---------------------------------    -------:|:-------------------------------------------------------------------------------------:|
-|  1    | R Basics: An Introduction to R (online book) | [Intro2R](https://intro2r.com/)                                                       |
-|  3    | Fun with ggplot2: ggplot2 cheatsheet          | [Posit (formerly R Studio) cheatsheets](https://posit.co/resources/cheatsheets/)      |
-|  4    | Learning more: UNR R Workshop                 | [UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)  |
-|  4    | Learning more: Master the Tidyverse           | [Master the Tidyverse (RStudio)] (https://github.com/rstudio/master-the-tidyverse)    |
+|:----: |:--------------------------------------------:|:-------------------------------------------------------------------------------------:|
+|  1    | R Basics: An Introduction to R (online book) | [Intro2R Online Book](https://intro2r.com/)                                           |      
+|  1    | R Basics: An Introduction to R (online lectures) | [Intro2R Website](https://alexd106.github.io/intro2R/lectures.html)               | 
+|  3    | Fun with ggplot2: ggplot2 cheatsheet         | [Posit (formerly R Studio) cheatsheets](https://posit.co/resources/cheatsheets/)      |
+|  4    | Learning more: UNR R Workshop                | [UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)  |
+|  4    | Learning more: Master the Tidyverse          | [Master the Tidyverse (RStudio)](https://github.com/rstudio/master-the-tidyverse)     |
  
 
 
