@@ -8,21 +8,6 @@ date: "Day 1, Data Science Basics in R Workshop"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## What is statistical programming?
-In-class discussion.
-
-## Why should I care?
-In-class discussion.
-
-## Let's take a break
-
-## Getting acquainted with R Studio
-In-class demo.
-
-## Let's take a break
-
-## R Basics
-
 ## Objects
 An R object is the primary unit of "stuff" within R. 
 
@@ -150,9 +135,4 @@ strep_tb$gender
 ```{r, echo = TRUE}
 is(strep_tb$gender)
 ```
-
-## Acknowledgements and References
-
-[Douglas, A et al. "An Introduction to R"](https://intro2r.com/). 
-This free online book is a great resource to review if you are interested in learning more.
 
