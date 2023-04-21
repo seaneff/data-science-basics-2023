@@ -40,3 +40,4 @@ vignettes/*.pdf
 
 # Other
 .DS_Store
+~*.pptx
