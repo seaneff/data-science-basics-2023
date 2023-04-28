@@ -8,39 +8,131 @@ date: "Day 1, Data Science Basics in R Workshop"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Objects
-An R object is the primary unit of "stuff" within R. 
+## R as a Calculator
 
-An object could be:
-
-  - a single number
-  - a single word
-  - a dataset
-  - an entire policy document or set of documents
-  - (among others)
-  
-## Create on object
-
-To create an object in R, give it a name and assign it a value.
-
-```{r object, echo = TRUE}
-my_first_object <- 3.14
+```{r echo = TRUE}
+1 + 1
 ```
 
-```{r objectprint, echo = TRUE}
+```{r echo = TRUE}
+8 - 10
+```
+
+```{r  echo = TRUE}
+(32198 + 8943289)/12
+```
+
+## Use R as (an advanced) calculator
+
+```{r  echo = TRUE}
+log(1)
+```
+
+```{r  echo = TRUE}
+sqrt(64)
+```
+
+```{r  echo = TRUE}
+abs(-14)
+```
+
+## Save objects
+
+```{r  echo = TRUE}
+my_first_object <- 3.14
+
 my_first_object
 ```
 
+
+```{r echo = TRUE}
+my_second_object <- 1+1
+
+my_second_object
+```
+
+## Objects can be strings
+
+```{r, echo = TRUE}
+policy <- "International Health Regulations (IHR)"
+```
+
+```{r, echo = TRUE}
+organization <- "UNAIDS"
+```
+
+## Use objects to do math
+
+```{r, echo = TRUE}
+my_first_object * my_second_object
+```
+
+```{r, echo = TRUE}
+my_first_object/my_second_object
+```
+
+```{r, echo = TRUE}
+my_first_object^my_second_object
+```
+
+## Vectors
+
+```{r, echo = TRUE}
+c("HIV", "malaria", "TB")
+```
+
+```{r, echo = TRUE}
+c(1419, 4832, 10342)
+```
+
+```{r, echo = TRUE}
+c("HIV", "malaria", 10342)
+```
+
+## Functions
+
+```{r, echo = TRUE}
+mean(c(1,2,3,4,5))
+```
+
+```{r, echo = TRUE}
+sd(c(1,2,3,4,5))
+```
+```{r, echo = TRUE}
+summary(c(1,2,3,4,5))
+```
+
+## Help
+
+```{r, echo = TRUE}
+?summary
+```
+
+## Vectorized calculations
+
+```{r, echo = TRUE}
+c(1,2,3,4,5) + 1
+```
+
+```{r, echo = TRUE}
+c(1,2,3,4,5) * 2
+```
+
+```{r, echo = TRUE}
+c(1,2,3,4,5) + c(8,0,0,0,0)
+```
+
+## Vector Errors
+
+```{r, echo = TRUE}
+c(1,2,3,4,5) + c(8,0)
+```
+
 ## Data types
-
-We will focus primarily on three related data types in this workshop: 
-
   - **numeric data:** numbers (e.g., -1.2, 0, 18)
   - **character:** strings of text (e.g., "malaria", "UNAIDS")
   - **logical:** TRUE or FALSE
   
-## Numeric data
-
 ```{r numeric, echo = TRUE}
 class(-1.2)
 ```
@@ -49,8 +141,6 @@ class(-1.2)
 class(c(-87.3, 8, 0))
 ```
 
-## Character data
-
 ```{r character, echo = TRUE}
 class("malaria")
 ```
@@ -58,8 +148,6 @@ class("malaria")
 ```{r character2, echo = TRUE}
 class(c("International Health Regulations", "UNAIDS", "34.2"))
 ```
-
-## Logical data
 
 ```{r logical, echo = TRUE}
 class(TRUE)
@@ -85,13 +173,9 @@ class(89.1)
 
 ## Data structures
 
-We will focus primarily on two related data structures in this workshop: 
-
   - **vector:** a group of observations of a single data type
   - **data frames:** a data set made out of rows and columns that can contain different types of data 
   
-## Vectors
-
 ```{r, echo = TRUE}
 my_vector_numeric <- c(1, 43, -8, 9.26)
 my_vector_numeric
@@ -100,8 +184,6 @@ my_vector_numeric
 ```{r, echo = TRUE}
 is(my_vector_numeric)
 ```
-
-## Vectors
 
 ```{r, echo = TRUE}
 my_vector_character <- c("Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda")
@@ -112,11 +194,6 @@ my_vector_character
 is(my_vector_character)
 ```
 
-## Data frames
-
-  - Data frames are like "data sets"
-  - Rows and columns of data
-  - Often loaded from a file or from a website
 
 ## Data frames
 
@@ -127,11 +204,11 @@ strep_tb <- read.csv("https://raw.githubusercontent.com/higgi13425/medicaldata/m
 ```{r, echo = TRUE}
 head(strep_tb[,1:6])
 ```
-## Data frames contain vectors
 
 ```{r, echo = TRUE}
 strep_tb$gender
 ```
+
 ```{r, echo = TRUE}
 is(strep_tb$gender)
 ```

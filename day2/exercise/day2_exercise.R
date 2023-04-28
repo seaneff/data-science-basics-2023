@@ -5,7 +5,3 @@
 ut <- read.csv("utilization_dataset.csv")
 countries <-  read.delim("countries.tsv")
 
-#######################################################################
-### Are all rows of the countries dataset unique? #####################
-#######################################################################
-
