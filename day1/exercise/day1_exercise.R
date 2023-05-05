@@ -1,29 +1,51 @@
 #######################################################################
-### Read in a CSV #####################################################
+### Create an object titled "name" ####################################
+## and assign it the value of your name ###############################
 #######################################################################
 
-ut <- read.csv("utilization_dataset.csv")
+## write your code here
+name <- "Steph"
 
 #######################################################################
-### View the first 5 rows of the data frame ###########################
+### What data type is the object name? ################################
+## Print it out in the R console ######################################
 #######################################################################
 
-head(ut)
+## write your code here
+is(name)
 
 #######################################################################
-### What data structure is the object "ut"? ###########################
+### Do some math that involves addition! ##############################
 #######################################################################
 
-## How would you print this out?
+## write your code here
+3+7
 
 #######################################################################
-### Explore some columns (vectors) ####################################
+### Do some math that involves multiplication #########################
 #######################################################################
 
-## print out the frequency at which data are reported
-ut$FREQUENCY
+## write your code here
+2*4
 
-## can you print out a list of all the locations participating?
+#######################################################################
+### Create a vector called "foods" that lists three of your favorite ##
+## foods ##############################################################
+#######################################################################
 
+## write your code here
+foods <- c("bread", "broccoli", "strawberries")
 
+#######################################################################
+### Calculate the average and standard deviation of the numbers in ####
+## the vector "data" ##################################################
+## and add a comment to describe what you did #########################
+#######################################################################
 
+data <- c(43, 75, 99, 234, 546)
+
+## calculate the mean and standard deviation of the object data
+## then also print out some additional summary statistics
+mean(data)
+sd(data)
+summary(data)

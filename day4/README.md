@@ -1,8 +1,28 @@
-# R in the Real World
-
-XXXXXXX
+R in the real-world
+================
+Day 4, Data Science Basics in R Workshop
 
 ### Version control with github
+
+In-class discussion.
 -   [Creating a github readme](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github)
+
+------------------------------------------------------------------------
+
 ### Research and open-source projects in R
+
+In-class discussion.
+
+------------------------------------------------------------------------
+
 ### Where and how to learn more
+
+In-class discussion.
+
+------------------------------------------------------------------------
+
+### Time to explore
+
+In-class discussion.
+
+------------------------------------------------------------------------

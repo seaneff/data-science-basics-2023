@@ -1,6 +1,7 @@
 Intro to Statistical Programming
 ================
 Day 1, Data Science Basics in R Workshop
+R Basics
 
 ### What is statistical programming, and why should I care?
 

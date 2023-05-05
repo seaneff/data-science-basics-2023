@@ -61,6 +61,20 @@ policy <- "International Health Regulations (IHR)"
 organization <- "UNAIDS"
 ```
 
+## Data types
+
+```{r, echo = TRUE}
+is(-1)
+```
+
+```{r, echo = TRUE}
+is(TRUE)
+```
+
+```{r, echo = TRUE}
+is("What is this?")
+```
+
 ## Use objects to do math
 
 ```{r, echo = TRUE}
