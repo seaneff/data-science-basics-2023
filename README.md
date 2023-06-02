@@ -22,6 +22,7 @@ No prior programming experience is necessary for this course, though to follow a
 ---
 
 ### Day 2: [Data management](https://github.com/seaneff/data-science-basics-2023/tree/main/day2)
+-   What is data management?
 -   Data types and structures in R
 -   Reading in a new dataset
 -   Data cleaning

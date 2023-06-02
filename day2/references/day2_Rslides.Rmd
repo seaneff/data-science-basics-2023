@@ -1,0 +1,66 @@
+---
+title: "Data management"
+output: ioslides_presentation
+date: "Day 2, Data Science Basics in R Workshop"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+countries <- read.delim("https://raw.githubusercontent.com/seaneff/data-science-basics-2023/main/day2/exercise/countries.tsv")
+```
+
+## Exploring your dataframe
+
+```{r echo = TRUE}
+dim(countries)
+```
+
+```{r echo = TRUE}
+names(countries)
+```
+
+
+## Selecting vectors from a dataframe
+
+```{r echo = TRUE}
+countries$general_hospital_count
+```
+
+## Missing values
+
+```{r echo = TRUE}
+table(complete.cases(countries$general_hospital_count))
+```
+
+
+```{r echo = TRUE}
+table(countries$general_hospital_count, useNA = "ifany")
+```
+
+
+## Missing values, again!
+
+```{r echo = TRUE}
+table(complete.cases(countries$mds_per_10000capita))
+```
+
+
+```{r echo = TRUE}
+table(countries$mds_per_10000capita, useNA = "ifany")
+```
+
+## Summarize data
+
+```{r echo = TRUE}
+summary(countries$mds_per_10000capita)
+```
+
+
+## Install packages
+
+```{r echo = TRUE}
+install.packages("ggplot2")
+```

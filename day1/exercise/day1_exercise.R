@@ -4,7 +4,6 @@
 #######################################################################
 
 ## write your code here
-name <- "Steph"
 
 #######################################################################
 ### What data type is the object name? ################################
@@ -12,21 +11,18 @@ name <- "Steph"
 #######################################################################
 
 ## write your code here
-is(name)
 
 #######################################################################
-### Do some math that involves addition! ##############################
+### Do some math that involves addition ###############################
 #######################################################################
 
 ## write your code here
-3+7
 
 #######################################################################
 ### Do some math that involves multiplication #########################
 #######################################################################
 
 ## write your code here
-2*4
 
 #######################################################################
 ### Create a vector called "foods" that lists three of your favorite ##
@@ -34,7 +30,6 @@ is(name)
 #######################################################################
 
 ## write your code here
-foods <- c("bread", "broccoli", "strawberries")
 
 #######################################################################
 ### Calculate the average and standard deviation of the numbers in ####
@@ -44,8 +39,5 @@ foods <- c("bread", "broccoli", "strawberries")
 
 data <- c(43, 75, 99, 234, 546)
 
-## calculate the mean and standard deviation of the object data
-## then also print out some additional summary statistics
-mean(data)
-sd(data)
-summary(data)
+
+

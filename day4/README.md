@@ -1,6 +1,9 @@
-R in the real-world
+R in the Real World
 ================
 Day 4, Data Science Basics in R Workshop
+2023 Georgetown University Health Diplomacy Training Initiative
+
+------------------------------------------------------------------------
 
 ### Version control with github
 

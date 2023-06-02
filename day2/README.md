@@ -1,14 +1,35 @@
 Data management
 ================
 Day 2, Data Science Basics in R Workshop
+2023 Georgetown University Health Diplomacy Training Initiative
 
-### What is data management? What does it involve?
+------------------------------------------------------------------------
+
+### Accessing course materials in github
+
+If you're here, you've already found the course materials on github!
+
+------------------------------------------------------------------------
+
+### What is data management?
 
 In-class discussion.
 
 ------------------------------------------------------------------------
 
-### Loading your first dataset(s) in R
+### Global health data sources
+
+In-class discussion.
+
+------------------------------------------------------------------------
+
+### Loading dataset(s) in R
+
+In-class discussion.
+
+------------------------------------------------------------------------
+
+### Data structures in R
 
 In-class discussion.
 

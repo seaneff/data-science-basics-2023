@@ -12,4 +12,4 @@ Download R [here](https://cran.r-project.org/).
 
 Download RStudio Desktop [here](https://posit.co/download/rstudio-desktop/#download).
 
-If you'd like some additional help downloading either R or RStudio Desktop, please see the online book ["An Introduction to R"](https://intro2r.com/installing-rstudio.html), which contains some information on getting set up. 
+If you'd like some additional support downloading either R or RStudio Desktop, please see the online book ["An Introduction to R"](https://intro2r.com/installing-rstudio.html), which contains some information on getting set up, including helpful videos.

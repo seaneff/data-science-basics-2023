@@ -1,7 +1,9 @@
 Intro to Statistical Programming
 ================
 Day 1, Data Science Basics in R Workshop
-R Basics
+2023 Georgetown University Health Diplomacy Training Initiative
+
+------------------------------------------------------------------------
 
 ### What is statistical programming, and why should I care?
 
@@ -17,7 +19,13 @@ In-class demo.
 
 ### R Basics
 
-See slides!
+In-class discussion.
+
+------------------------------------------------------------------------
+
+### (Optional) Exercise
+
+See exercise folder for exercise and solutions.
 
 ------------------------------------------------------------------------
 

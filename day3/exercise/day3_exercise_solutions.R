@@ -52,3 +52,4 @@ ggplot(countries,
   ylab("Nurses and midwives\nper 10,000 capita") +
   ggtitle("Healthcare worker density\n(doctors, nurses, and midwives)\nby WHO region") +
   labs(color = "WHO Region")
+
