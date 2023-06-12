@@ -45,9 +45,9 @@ No prior programming experience is necessary for this course, though to follow a
 -   Research and open-source projects in R
 -   Where and how to learn more
 
--------
+---
 
-# Other great resources
+### Other great resources
 
 
 |  Topic                                    |     Materials 
@@ -57,7 +57,7 @@ No prior programming experience is necessary for this course, though to follow a
 | Learning more: UNR R Workshop                     | [UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)  |
 | ggplot2                                           | [Posit ggplot2 cheatsheets](https://posit.co/resources/cheatsheets/)                  |
 
- 
+ ---
 
 
 
