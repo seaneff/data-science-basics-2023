@@ -47,16 +47,16 @@ No prior programming experience is necessary for this course, though to follow a
 
 -------
 
-# References and other great resources
+# Other great resources
 
 
-| Day   |          Topic                               |     Materials 
-|:----: |:--------------------------------------------:|:-------------------------------------------------------------------------------------:|
-|  1    | R Basics: An Introduction to R (online book) | [Intro2R Online Book](https://intro2r.com/)                                           |      
-|  1    | R Basics: An Introduction to R (online lectures) | [Intro2R Website](https://alexd106.github.io/intro2R/lectures.html)               | 
-|  3    | Fun with ggplot2: ggplot2 cheatsheet         | [Posit (formerly R Studio) cheatsheets](https://posit.co/resources/cheatsheets/)      |
-|  4    | Learning more: UNR R Workshop                | [UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)  |
-|  4    | Learning more: Master the Tidyverse          | [Master the Tidyverse (RStudio)](https://github.com/rstudio/master-the-tidyverse)     |
+|  Topic                                    |     Materials 
+|:--------------------------------------------:     |:-------------------------------------------------------------------------------------:|
+| R Basics: An Introduction to R (online book)      | [Intro2R Online Book](https://intro2r.com/)                                           |   
+| R Basics: An Introduction to R (online lectures)  | [Intro2R Website](https://alexd106.github.io/intro2R/lectures.html)                   | 
+| Learning more: UNR R Workshop                     | [UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)  |
+| ggplot2                                           | [Posit ggplot2 cheatsheets](https://posit.co/resources/cheatsheets/)                  |
+
  
 
 
