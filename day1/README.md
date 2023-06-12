@@ -5,27 +5,51 @@ Day 1, Data Science Basics in R Workshop
 
 ------------------------------------------------------------------------
 
+### Introductions, logistics, and what to expect
+
+-   Introductions
+-   Housekeeping notes and outlets
+-   What to expect
+-   Learning by trial and error
+
+In-class discussion (see slides)
+
+------------------------------------------------------------------------
+
 ### What is statistical programming, and why should I care?
 
-In-class discussion.
+-   Statistical programming
+-   Brief R history and background
+-   Why learn R
+
+In-class discussion (see slides)
 
 ------------------------------------------------------------------------
 
 ### Getting acquainted with R Studio
 
-In-class demo.
+-   R Studio Console
+-   Downloading R and R Studio
+
+In-class discussion (see slides)
 
 ------------------------------------------------------------------------
 
 ### R Basics
 
-In-class discussion.
+-   Using R as a calculator
+-   Objects
+-   Data types
+-   Vectors
+-   Functions
+
+In-class demo (see slides)
 
 ------------------------------------------------------------------------
 
 ### (Optional) Exercise
 
-See exercise folder for exercise and solutions.
+See [exercise folder](https://github.com/seaneff/data-science-basics-2023/tree/main/day1/optional-exercise) for exercise and solutions.
 
 ------------------------------------------------------------------------
 

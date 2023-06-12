@@ -15,7 +15,9 @@ No prior programming experience is necessary for this course, though to follow a
 ---
 
 ### Day 1: [Intro to statistical programming](https://github.com/seaneff/data-science-basics-2023/tree/main/day1)
+-   Introductions and logistics
 -   What is statistical programming, and why should I care?
+-   Downloading R and RStudio
 -   Getting acquainted with R Studio
 -   R Basics
 
