@@ -8,7 +8,7 @@ No prior programming experience is necessary for this course, though to follow a
 
 ---
 
-### Download R: [Getting set up](https://github.com/seaneff/data-science-basics-2023/tree/main/download_R)
+### Download R: [Getting set up](https://github.com/seaneff/data-science-basics-2023/tree/main/download-R)
 -   Install R
 -   Install RStudio Desktop
 
@@ -21,7 +21,7 @@ No prior programming experience is necessary for this course, though to follow a
 
 ---
 
-### Day 2: [Data management](https://github.com/seaneff/data-science-basics-2023/tree/main/day2)
+### Day 2: [Data management]
 -   What is data management?
 -   Data types and structures in R
 -   Reading in a new dataset
@@ -31,14 +31,14 @@ No prior programming experience is necessary for this course, though to follow a
 
 ---
 
-### Day 3: [Exploratory data analysis](https://github.com/seaneff/data-science-basics-2023/tree/main/day3)
+### Day 3: [Exploratory data analysis]
 -   Descriptive statistics
 -   Data visualization
 -   Fun with ggplot2
 
 ---
 
-### Day 4: [R in the real world](https://github.com/seaneff/data-science-basics-2023/tree/main/day4)
+### Day 4: [R in the real world]
 -   Version control with github
 -   Research and open-source projects in R
 -   Where and how to learn more
