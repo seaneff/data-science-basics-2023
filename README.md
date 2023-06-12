@@ -8,7 +8,7 @@ No prior programming experience is necessary for this course, though to follow a
 
 ---
 
-### Download R: [Getting set up](https://github.com/seaneff/data-science-basics-2023/tree/main/download-R)
+### Download R: [Getting set up](https://github.com/seaneff/data-science-basics-2023/tree/main/reference-download-R)
 -   Install R
 -   Install RStudio Desktop
 
