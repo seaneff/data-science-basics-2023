@@ -47,6 +47,15 @@ In-class demo (see slides)
 
 ------------------------------------------------------------------------
 
+### Intro to github
+
+-   What is github?
+-   Accessing course materials
+
+In-class demo (see slides)
+
+------------------------------------------------------------------------
+
 ### (Optional) Exercise
 
 See [exercise folder](https://github.com/seaneff/data-science-basics-2023/tree/main/day1/optional-exercise) for exercise and solutions.
