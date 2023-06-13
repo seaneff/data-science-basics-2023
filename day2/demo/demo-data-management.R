@@ -26,7 +26,7 @@ library(readr)
 #######################################################################
 
 goal_16 <- read_excel("Goal16.xlsx")
-countries <- read.delim("countries.tsv")
+countries <- read.delim("input_data.tsv")
 
 #######################################################################
 ### See datasets in R Studio Viewer ###################################
@@ -68,9 +68,23 @@ table(after_dark$GeoAreaName)
 ## what years are the data from?
 table(after_dark$Time_Detail)
 
+########################################################################################################
+### Look into specific types of data: ##################################################################
+### Proportion of population subjected to robbery in the previous 12 months, by sex (%) ################
+########################################################################################################
+
+## create a dataset with just the value we are interested in
+robbery <- goal_16[which(goal_16$SeriesDescription == "Proportion of population subjected to robbery in the previous 12 months, by sex (%)"),]
+
+## what GeoAreaNames have data for this?
+table(robbery$GeoAreaName)
+
+## what years are the data from?
+table(robbery$Time_Detail)
+
 ############################################################################################################################
 ### For each country, identify the most recent data ########################################################################
-## for the observation  Proportion of population that feel safe walking alone around the area they live after dark (%) #####
+## for the observation Proportion of population that feel safe walking alone around the area they live after dark (%) #####
 ############################################################################################################################
 
 ## find the most recent year with data for each country
@@ -85,25 +99,56 @@ after_dark_with_year <- merge(after_dark, most_recent_years_per_country, by = "G
 after_dark_with_year$is_most_recent <-  after_dark_with_year$Time_Detail == after_dark_with_year$MostRecentYear
 table(after_dark_with_year$is_most_recent)
 most_recent_after_dark <- after_dark_with_year[which(after_dark_with_year$is_most_recent == TRUE),]
-  
+most_recent_after_dark$reference <- paste(most_recent_after_dark$Source, " (", most_recent_after_dark$Time_Detail, ")", sep = "")
+
+############################################################################################################################
+### For each country, identify the most recent data ########################################################################
+## for the observation Proportion of population subjected to robbery in the previous 12 months, by sex (%) #################
+############################################################################################################################
+
+## find the most recent year with data for each country
+most_recent_years_per_country_robbery <- aggregate(robbery$Time_Detail, by = list(robbery$GeoAreaName), FUN = max)
+most_recent_years_per_country_robbery
+names(most_recent_years_per_country_robbery) <- c("GeoAreaName", "MostRecentYear")
+
+## join/merge that dataset back with the original after_dark dataset
+robbery_with_year <- merge(robbery, most_recent_years_per_country_robbery, by = "GeoAreaName")
+
+## indicate if data are the most recent
+robbery_with_year$is_most_recent <-  robbery_with_year$Time_Detail == robbery_with_year$MostRecentYear
+table(robbery_with_year$is_most_recent)
+most_recent_robbery <- robbery_with_year[which(robbery_with_year$is_most_recent == TRUE),]
+most_recent_robbery$reference <- paste(most_recent_robbery$Source, " (", most_recent_robbery$Time_Detail, ")", sep = "")
+
 ######################################################################################################
 ### reformat so we have just one row per country #####################################################
 ######################################################################################################
 
 final_dataset <- sqldf(
   "select 
-    d.GeoAreaName as country_name,
+    c.name as country_name,
     c.iso_3166,
     c.who_member_state,
     c.who_region,
     max(case when d.Sex == 'BOTHSEX' then d.Value else null end) as safe_after_dark_overall,
     max(case when d.Sex == 'MALE' then d.Value else null end) as safe_after_dark_male,
     max(case when d.Sex == 'FEMALE' then d.Value else null end) as safe_after_dark_female,
-    max(d.TimePeriod) as safe_after_dark_year,
-    max(d.Source) as safe_after_dark_data_source
-  from most_recent_after_dark as d
-  join countries as c
+    max(d.reference) as safe_after_dark_reference,
+    max(case when r.Sex == 'BOTHSEX' then r.Value else null end) robbery_overall,
+    max(case when r.Sex == 'MALE' then r.Value else null end) as robbery_male,
+    max(case when r.Sex == 'FEMALE' then r.Value else null end) as robbery_female,
+    max(r.reference) as robbery_reference,
+    max(c.doctor_consultations_per_capita) as doctor_consultations_per_capita,
+    max(c.doctors_consultation_reference) as doctors_consultation_reference,
+    max(c.mds_per_10000capita) as mds_per_10000capita,
+    max(c.mds_per_10000capita_reference) as mds_per_10000capita_reference,
+    max(c.nurses_midwives_per_10000capita) as nurses_midwives_per_10000capita,
+    max(c.nurses_midwives_per_10000capita_reference) as nurses_midwives_per_10000capita_reference
+  from countries as c
+  left join most_recent_after_dark as d
     on d.GeoAreaName = c.name
+  left join most_recent_robbery as r
+    on r.GeoAreaName = c.name
    group by d.Time_Detail,
     c.iso_3166,
     c.who_member_state,
