@@ -73,8 +73,20 @@ In-class discussion (see slides)
 -   Reproducible results
 -   Data dictionaries
 -   Commments in code
+-   Version control in github
 -   README files
 -   R Markdown
+
+In-class discussion (see slides)
+
+------------------------------------------------------------------------
+
+### Data, questions, and exploratory analysis
+
+-   Clarify research questions and goals
+-   Identify available data and understand gaps
+-   Identify a strategy for data analysis, visualization, and communication
+-   Brainstorming ideas for tomorrow
 
 In-class discussion (see slides)
 
