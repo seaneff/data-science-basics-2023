@@ -4,23 +4,18 @@
 
 ## if you don't already have readxl downloaded, start by running:
 ## install.packages("ggplot2")
-## install.packages("sqldf")
-## install.packages("readr")
+## install.packages("dplyr")
 
 library(ggplot2)
+library(dplyr)
 
 #######################################################################
 ### Read in your raw dataset ##########################################
 #######################################################################
 
-countries <- read.delim("countries.tsv")
-breeds <- read.delim("local_breeds_at_risk.tsv")
-
-#######################################################################
-### See datasets in R Studio Viewer ###################################
-#######################################################################
-
-View(countries)
+countries <- read.delim("https://raw.githubusercontent.com/seaneff/data-science-basics-2023/main/day3/demo/datasets/countries.tsv")
+breeds <- read.delim("https://raw.githubusercontent.com/seaneff/data-science-basics-2023/main/day3/demo/datasets/local_breeds_at_risk.tsv")
+sanctions <- read.delim("https://raw.githubusercontent.com/seaneff/data-science-basics-2023/main/day3/demo/datasets/sanctions.tsv")
 
 #######################################################################
 ### Explore dataset generally #########################################
@@ -28,6 +23,8 @@ View(countries)
 
 ## What are the columns/fields?
 names(countries)
+names(breeds)
+names(sanctions)
 
 #############################################################################################
 ### Descriptive statistics: #################################################################
@@ -150,27 +147,27 @@ ggplot(countries, aes(safe_after_dark_overall)) +
 ########################################################################################################
 
 ## most basic possible scatterplot in ggplot2
-ggplot(countries, aes(x = safe_after_dark_female, y = safe_after_dark_male)) +
+ggplot(countries, aes(x = mds_per_10000capita, y = nurses_midwives_per_10000capita)) +
   geom_point()
 
 ## add axis labels and a title
-ggplot(countries, aes(x = safe_after_dark_female, y = safe_after_dark_male)) +
+ggplot(countries, aes(x = mds_per_10000capita, y = nurses_midwives_per_10000capita)) +
   geom_point() +
-  xlab("Percent of females") +
-  ylab("Percent of males") +
-  ggtitle("Proportion of population, per country\nwho feel safe walking alone after dark")
+  xlab("Number of MDs\nper 10,000 capita") +
+  ylab("Number of nurses and midwives\nper 10,000 capita") +
+  ggtitle("Health workforce per capita, by country\nMDs and nurses/midwives")
 
 ## color points by WHO region
 ggplot(countries, 
-       aes(x = safe_after_dark_female, 
-           y = safe_after_dark_male,
-           ## col here tells R that the points should be colored based on the WHO region
+       aes(x = mds_per_10000capita, 
+           y = nurses_midwives_per_10000capita,
+           ## the line below colors the plots by WHO region
            col = who_region)) +
   geom_point() +
-  xlab("Percent of females") +
-  ylab("Percent of males") +
-  ggtitle("Proportion of population, per country\nwho feel safe walking alone after dark")
-
+  xlab("Number of MDs\nper 10,000 capita") +
+  ylab("Number of nurses and midwives\nper 10,000 capita") +
+  ggtitle("Health workforce per capita, by country\nMDs and nurses/midwives") +
+  labs(col = "WHO region") ## this line gives the legend a nice title
 
 ########################################################################################################
 ### Data visualization: ################################################################################
@@ -196,4 +193,17 @@ ggplot(countries, aes(who_region)) +
   ggtitle("Number of WHO member states\nper WHO region") +
   coord_flip() 
 
+########################################################################################################
+### Data visualization: ################################################################################
+### Line chart (ggplot2) ###############################################################################
+########################################################################################################
 
+
+world <- map_data("world")
+world_data <- inner_join(world, countries, by = join_by(region == country_name))
+
+ggplot(data = world_data, mapping = aes(x = long, y = lat, group = group)) + 
+  coord_fixed(1.3) +
+  geom_polygon(aes(fill = mds_per_10000capita)) +
+  scale_fill_distiller(palette ="RdBu", direction = -1) + # or direction=1
+  ggtitle("Global Human Development Index (HDI)") 
