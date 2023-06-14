@@ -6,6 +6,8 @@ This workshop is part of the [2023 Georgetown University Health Diplomacy Traini
 
 No prior programming experience is necessary for this course, though to follow along with course materials, participants will require access to a fully charged laptop or computer. There are no required course materials or textbooks, though we will work together through select materials from the online [Intro to R](https://intro2r.com/) book developed by Alex Douglas, Deon Roos, Francesca Mancini, Ana Couto and David Lusseau.
 
+If you have questions, feel free to reach out at sde31@georgetown.edu. 
+
 ---
 
 ### Download R: [Getting set up](https://github.com/seaneff/data-science-basics-2023/tree/main/reference-download-R)
