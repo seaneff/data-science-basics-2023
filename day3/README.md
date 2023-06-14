@@ -37,6 +37,12 @@ Descriptive statistics summarize data, and typically describe three types of thi
 
 -   histograms
 -   scatterplots
+-   boxplots
+-   world maps
 -   working with colors and sizes
 
 ------------------------------------------------------------------------
+
+### Explore on your own
+
+[Data to Viz] (https://www.data-to-viz.com/)
