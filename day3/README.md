@@ -22,7 +22,7 @@ Descriptive statistics summarize data, and typically describe three types of thi
 ### Choosing a data visualization
 
 -   [Andrew Abela chart chooser](https://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html)
--   [Data to Viz] (https://www.data-to-viz.com/)
+-   [Data to Viz](https://www.data-to-viz.com/)
 
 ------------------------------------------------------------------------
 
@@ -39,10 +39,11 @@ Descriptive statistics summarize data, and typically describe three types of thi
 -   scatterplots
 -   boxplots
 -   world maps
+-   Cleveland dot plots
 -   working with colors and sizes
 
 ------------------------------------------------------------------------
 
 ### Explore on your own
 
-[Data to Viz] (https://www.data-to-viz.com/)
+[Data to Viz](https://www.data-to-viz.com/)

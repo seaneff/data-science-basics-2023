@@ -3,8 +3,8 @@
 #######################################################################
 
 ## if you don't already have readxl downloaded, start by running:
-## install.packages("ggplot2")
-## install.packages("dplyr")
+#install.packages("ggplot2")
+#install.packages("dplyr")
 
 library(ggplot2)
 library(dplyr)
@@ -57,6 +57,9 @@ quantile(countries$safe_after_dark_overall, na.rm = TRUE)
 ### Counts and rates ########################################################################
 #############################################################################################
 
+## counts of different sanction types
+table(sanctions$type)
+
 ## number of countries where over 50% of respondents reported feeling safe walking alone after dark
 table(countries$safe_after_dark_overall >= 50) 
 
@@ -89,7 +92,7 @@ hist(countries$safe_after_dark_overall,
      col = "light blue")
 
 ## specify the number of separate bars we want in the plot
-hist(countries$safe_after_dark_overall,
+hist(countries$safe_after_dark_overall, 
      xlab = "Percent of population",
      ylab = "Count",
      main = "Proportion of population, per country\nwho feel safe walking alone after dark",
@@ -103,8 +106,8 @@ hist(countries$safe_after_dark_overall,
 ########################################################################################################
 
 ## most basic possible scatterplot
-plot(countries$safe_after_dark_male,
-     countries$safe_after_dark_female)
+plot(x = countries$safe_after_dark_male,
+     y = countries$safe_after_dark_female)
 
 ## add labels and color
 plot(x = countries$safe_after_dark_male,
@@ -120,11 +123,11 @@ plot(x = countries$safe_after_dark_male,
 ########################################################################################################
 
 ## most basic possible histogram in ggplot2
-ggplot(countries, aes(safe_after_dark_overall)) +
+ggplot(data = countries, aes(safe_after_dark_overall)) +
   geom_histogram()
 
 ## add axis labels and a title
-ggplot(countries, aes(safe_after_dark_overall)) +
+ggplot(data = countries, aes(safe_after_dark_overall)) +
   geom_histogram() +
   ## xlab specifies the x axis label
   xlab("Percent of population") +
@@ -134,7 +137,7 @@ ggplot(countries, aes(safe_after_dark_overall)) +
   ggtitle("Proportion of population, per country\nwho feel safe walking alone after dark")
   
 ## add colors
-ggplot(countries, aes(safe_after_dark_overall)) +
+ggplot(data = countries, aes(safe_after_dark_overall)) +
   ## fill specifies how the histogram bins are filled, color specifies their outline color
   geom_histogram(fill = "light blue", color = "black") +
   xlab("Percent of population") +
@@ -147,30 +150,18 @@ ggplot(countries, aes(safe_after_dark_overall)) +
 ########################################################################################################
 
 ## most basic possible scatterplot in ggplot2
-ggplot(countries, aes(x = mds_per_10000capita, y = nurses_midwives_per_10000capita)) +
+ggplot(data = countries, aes(x = mds_per_10000capita, y = nurses_midwives_per_10000capita)) +
   geom_point()
 
 ## add axis labels and a title
-ggplot(countries, aes(x = mds_per_10000capita, y = nurses_midwives_per_10000capita)) +
+ggplot(data = countries, aes(x = mds_per_10000capita, y = nurses_midwives_per_10000capita)) +
   geom_point() +
   xlab("Number of MDs\nper 10,000 capita") +
   ylab("Number of nurses and midwives\nper 10,000 capita") +
   ggtitle("Health workforce per capita, by country\nMDs and nurses/midwives")
 
 ## color points by WHO region
-ggplot(countries, 
-       aes(x = mds_per_10000capita, 
-           y = nurses_midwives_per_10000capita,
-           ## the line below colors the plots by WHO region
-           col = who_region)) +
-  geom_point() +
-  xlab("Number of MDs\nper 10,000 capita") +
-  ylab("Number of nurses and midwives\nper 10,000 capita") +
-  ggtitle("Health workforce per capita, by country\nMDs and nurses/midwives") +
-  labs(col = "WHO region") ## this line gives the legend a nice title
-
-## color points by WHO region
-ggplot(countries, 
+ggplot(data = countries, 
        aes(x = mds_per_10000capita, 
            y = nurses_midwives_per_10000capita,
            ## the line below colors the plots by WHO region
@@ -187,17 +178,17 @@ ggplot(countries,
 ########################################################################################################
 
 ## most basic possible scatterplot in ggplot2
-ggplot(countries, aes(who_region)) +
+ggplot(data = countries, aes(who_region)) +
   geom_bar()
 
 ## labels are hard to see, try flipping plot
-ggplot(countries, aes(who_region)) +
+ggplot(data = countries, aes(who_region)) +
   geom_bar() +
   ## reverse the X and Y coordinates (flip barplot horizontally)
   coord_flip()
 
 ## add colors and titles
-ggplot(countries, aes(who_region)) +
+ggplot(data = countries, aes(who_region)) +
   ## fill is the color used to fill the barplot, black is the color that surrounds the bars
   geom_bar(fill = "dark blue", color = "black") +
   ylab("Count") +
@@ -205,6 +196,21 @@ ggplot(countries, aes(who_region)) +
   ggtitle("Number of WHO member states\nper WHO region") +
   coord_flip() 
 
+########################################################################################################
+### Data visualization: ################################################################################
+### Barplot (ggplot2) ##################################################################################
+########################################################################################################
+
+sanctions %>%
+  filter(primary_country == "DPRK") %>%
+  ggplot(aes(x = primary_sanctions_program, group = type, fill = type)) +
+  geom_bar(position = "stack") +
+  xlab("Primary sanctions program") +
+  ylab("Number of sanctions") +
+  labs(fill = "Sanction type",
+       ## you can add a caption by specifying caption from within the labs() function
+       caption = "Based on public data from\nUS Office of Foreign Assets Control as of June 2023") +
+  ggtitle("Types of sanctions in DPRK") 
 
 ########################################################################################################
 ### Data visualization: ################################################################################
