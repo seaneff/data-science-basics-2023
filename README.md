@@ -25,7 +25,7 @@ If you have questions, feel free to reach out at sde31@georgetown.edu.
 
 ---
 
-### Day 2: [Data management]
+### Day 2: [Data management](https://github.com/seaneff/data-science-basics-2023/tree/main/day2)
 -   What is data management?
 -   Data types and structures in R
 -   Reading in a new dataset
@@ -35,15 +35,16 @@ If you have questions, feel free to reach out at sde31@georgetown.edu.
 
 ---
 
-### Day 3: [Exploratory data analysis]
+### Day 3: [Exploratory data analysis](https://github.com/seaneff/data-science-basics-2023/tree/main/day3)
 -   Descriptive statistics
 -   Data visualization
 -   Fun with ggplot2
 
 ---
 
-### Day 4: [R in the real world]
+### Day 4: [R in the real world](https://github.com/seaneff/data-science-basics-2023/tree/main/day4)
 -   Version control with github
+-   Small portfolio of your work
 -   Research and open-source projects in R
 -   Where and how to learn more
 
@@ -56,8 +57,11 @@ If you have questions, feel free to reach out at sde31@georgetown.edu.
 |:--------------------------------------------:     |:-------------------------------------------------------------------------------------:|
 | R Basics: An Introduction to R (online book)      | [Intro2R Online Book](https://intro2r.com/)                                           |   
 | R Basics: An Introduction to R (online lectures)  | [Intro2R Website](https://alexd106.github.io/intro2R/lectures.html)                   | 
+| Real-world examples and talks                     | [Posit Youtube](https://www.youtube.com/@PositPBC/videos)                             |
 | Learning more: UNR R Workshop                     | [UNR R Workshop 2022](https://kevintshoemaker.github.io/R-Bootcamp/index.html#About)  |
+| Data visualization examples                       | [Data-to-Viz](https://www.data-to-viz.com/)                                           |
 | ggplot2                                           | [Posit ggplot2 cheatsheets](https://posit.co/resources/cheatsheets/)                  |
+| github                                            | [Github for poets](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=1)                  |
 
  ---
 
