@@ -1,0 +1,9 @@
+time	group	average_score	ci_lower	ci_upper
+week 1	group 1	9.8	9.3	10.3
+week 1	group 2	9.9	9.5	10.3
+week 2	group 1	9.3	8.9	9.7
+week 2	group 2	9.1	8.6	9.6
+week 3	group 1	9	8.6	9.4
+week 3	group 2	8.3	7.9	8.7
+week 4	group 1	8.8	8.4	9.2
+week 4	group 2	8.1	7.8	8.4
