@@ -29,6 +29,7 @@ Descriptive statistics summarize data, and typically describe three types of thi
 ### Plots in base R
 
 -   histograms
+-   pie chart
 -   scatterplots
 
 ------------------------------------------------------------------------
@@ -36,14 +37,24 @@ Descriptive statistics summarize data, and typically describe three types of thi
 ### Fun with ggplot2
 
 -   histograms
+-   pie charts
 -   scatterplots
 -   boxplots
 -   world maps
 -   Cleveland dot plots
--   working with colors and sizes
+
+------------------------------------------------------------------------
+
+### Choosing colors for your plots
+
+-   best practices
+-   color resources and examples
 
 ------------------------------------------------------------------------
 
 ### Explore on your own
 
 [Data to Viz](https://www.data-to-viz.com/)
+["Chart chooser"](https://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html)
+[colorbrewer2.org](https://colorbrewer2.org/)
+

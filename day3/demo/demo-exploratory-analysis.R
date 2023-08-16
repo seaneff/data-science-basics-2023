@@ -16,6 +16,7 @@ library(dplyr)
 countries <- read.delim("https://raw.githubusercontent.com/seaneff/data-science-basics-2023/main/day3/demo/datasets/countries.tsv")
 breeds <- read.delim("https://raw.githubusercontent.com/seaneff/data-science-basics-2023/main/day3/demo/datasets/local_breeds_at_risk.tsv")
 sanctions <- read.delim("https://raw.githubusercontent.com/seaneff/data-science-basics-2023/main/day3/demo/datasets/sanctions.tsv")
+study <- read.delim("https://raw.githubusercontent.com/seaneff/data-science-basics-2023/main/day3/demo/datasets/study.tsv")
 
 #######################################################################
 ### Explore dataset generally #########################################
@@ -102,6 +103,20 @@ hist(countries$safe_after_dark_overall,
 
 ########################################################################################################
 ### Data visualization: ################################################################################
+### Pie chart (base R) #################################################################################
+########################################################################################################
+
+## most basic possible pie chart
+pie(table(sanctions$primary_sanctions_program))
+
+## adjust the colors on the pie chart
+pie(table(sanctions$primary_sanctions_program),
+    col = c("#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "#fb9a99"),
+    ## add a title
+    main = "Types of primary sanctions (DPRK)")
+
+########################################################################################################
+### Data visualization: ################################################################################
 ### Scatterplot (base R) ###############################################################################
 ########################################################################################################
 
@@ -126,9 +141,9 @@ plot(x = countries$safe_after_dark_male,
 ggplot(data = countries, aes(safe_after_dark_overall)) +
   geom_histogram()
 
-## add axis labels and a title
+## add axis labels and a title, adjust binwidth
 ggplot(data = countries, aes(safe_after_dark_overall)) +
-  geom_histogram() +
+  geom_histogram(binwidth = 5) +
   ## xlab specifies the x axis label
   xlab("Percent of population") +
   ## ylab specifies the x axis label
@@ -139,10 +154,31 @@ ggplot(data = countries, aes(safe_after_dark_overall)) +
 ## add colors
 ggplot(data = countries, aes(safe_after_dark_overall)) +
   ## fill specifies how the histogram bins are filled, color specifies their outline color
-  geom_histogram(fill = "light blue", color = "black") +
+  geom_histogram(fill = "light blue", color = "black", binwidth = 5) +
   xlab("Percent of population") +
   ylab("Count") +
   ggtitle("Proportion of population, per country\nwho feel safe walking alone after dark")
+
+########################################################################################################
+### Data visualization: ################################################################################
+### Piechart (ggplot2) #################################################################################
+########################################################################################################
+
+# note: piecharts in ggplot2 are a bit tough,
+# don't worry about following this first step right away
+
+# generate a dataset with counts
+temp_data <- sanctions %>%
+  group_by(primary_sanctions_program) %>%
+  summarize(n = n())
+
+ggplot(temp_data, aes(x = "" , y = n, fill = primary_sanctions_program)) +
+  geom_col(width = 1, color = 1) +
+  coord_polar(theta = "y") +
+  scale_fill_brewer(palette = "Pastel1") +
+  guides(fill = guide_legend(title = "Primary sanction type")) +
+  theme_void() +
+  ggtitle("Types of primary sanctions (DPRK)")
 
 ########################################################################################################
 ### Data visualization: ################################################################################
@@ -198,13 +234,13 @@ ggplot(data = countries, aes(who_region)) +
 
 ########################################################################################################
 ### Data visualization: ################################################################################
-### Barplot (ggplot2) ##################################################################################
+### Stacked barplot (ggplot2) ##########################################################################
 ########################################################################################################
 
 sanctions %>%
   filter(primary_country == "DPRK") %>%
   ggplot(aes(x = primary_sanctions_program, group = type, fill = type)) +
-  geom_bar(position = "stack") +
+  geom_bar(position = "stack", color = "black") +
   xlab("Primary sanctions program") +
   ylab("Number of sanctions") +
   labs(fill = "Sanction type",
@@ -247,9 +283,11 @@ breeds %>%
 ### World maps #########################################################################################
 ########################################################################################################
 
+## read in and format data
 world <- map_data("world")
 world_data <- inner_join(world, countries, by = join_by(region == country_name))
 
+## generate world map plot
 ggplot(data = world_data, mapping = aes(x = long, y = lat, group = group)) + 
   coord_fixed(1.3) +
   geom_polygon(aes(fill = mds_per_10000capita)) +
@@ -277,14 +315,56 @@ ggplot(data = world_data, mapping = aes(x = long, y = lat, group = group)) +
 countries %>%
   filter(complete.cases(safe_after_dark_female)) %>%
   filter(complete.cases(safe_after_dark_male)) %>%
+  filter(who_region == "Region of the Americas") %>%
   mutate(country_name = factor(country_name, levels = country_name[order(safe_after_dark_female[complete.cases(safe_after_dark_female)])])) %>%
   ggplot() +
   geom_segment( aes(y = country_name, yend = country_name,
-                    x = safe_after_dark_female, xend = safe_after_dark_male), color="grey") +
-  geom_point( aes(y = country_name, x = safe_after_dark_female), color = "#22A699", size=3 ) +
-  geom_point( aes(y = country_name, x = safe_after_dark_male), color = "#F29727", size=3 ) +
-  xlab("Proportion of people") +
+                    x = safe_after_dark_female/100, xend = safe_after_dark_male/100), color = "grey") +
+  geom_point( aes(y = country_name, x = safe_after_dark_female/100), color = "#22A699", size = 3 ) +
+  geom_point( aes(y = country_name, x = safe_after_dark_male/100), color = "#F29727", size = 3 ) +
+  xlab("Percentage of people") +
   ylab("") +
-  ggtitle("Proportion of people who feel\nsafe walking alone after dark") +
-  facet_wrap(~who_region, scales = "free_y")
+  ggtitle("Percentage of people who feel\nsafe walking alone after dark") +
+  scale_x_continuous(labels = scales::percent)
   
+########################################################################################################
+### Data visualization: ################################################################################
+### Study trajectory plot (line) with error bars #######################################################
+### Getting fancier here, you don't need to replicate this one #########################################
+########################################################################################################
+
+ggplot(sample_study_data, aes(x = time, y = average_score, col = group, group = group,
+                              ymin = ci_lower, ymax = ci_upper)) +
+  ## below, the position_dodge argument helps offset the points so they don't totally overlap
+  geom_point(position = position_dodge(width = 0.1)) +
+  geom_line(position = position_dodge(width = 0.1)) +
+  geom_errorbar(width = 0.1, position = position_dodge(width = 0.1),
+                linetype = "longdash") +
+  xlab("") +
+  ylab("Average score") +
+  ggtitle("Example study trajectory plot") +
+  theme_light() +
+  theme(plot.caption = element_text(size = 8)) +
+  labs(caption = "Data are notional and do not reflect actual study data",
+       color = "Group") +
+  scale_color_manual(values = c("#0C356A", "#279EFF"))
+
+########################################################################################################
+### Data visualization: ################################################################################
+### Study trajectory plot (bar) with error bars ########################################################
+### Getting fancier here, you don't need to replicate this one #########################################
+########################################################################################################
+
+ggplot(study, aes(x = time, y = average_score, fill = group, group = group,
+                              ymin = ci_lower, ymax = ci_upper)) +
+  geom_bar(stat = "identity", position = "dodge", color = "black") +
+  geom_errorbar(width = .4, position = position_dodge(.9), 
+                linetype = "longdash") +
+  xlab("") +
+  ylab("Average score") +
+  ggtitle("Example study trajectory plot") +
+  theme_light() +
+  theme(plot.caption = element_text(size = 8)) +
+  labs(caption = "Data are notional and do not reflect actual study data",
+       fill = "Group") +
+  scale_fill_manual(values = c("#0C356A", "#279EFF"))
