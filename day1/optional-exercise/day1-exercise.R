@@ -32,53 +32,52 @@
 ## write your code here
 
 #######################################################################
-### Create a logical vector and assign it to an object called logic ###
+### Create a logical vector and assign it to an object called #########
+### logical_vector ####################################################
+#######################################################################
+
+## write your code here
+
+#############################################################################
+### Use is() to confirm that the object logical_vector has type logical #####
+#############################################################################
+
+## write your code here
+
+##############################################################################
+### Create a numeric vector with five values and assign it to an object ######
+## called numeric_vector #####################################################
+##############################################################################
+
+## write your code here
+
+#######################################################################
+### Add one to each element of numeric_vector #########################
 #######################################################################
 
 ## write your code here
 
 #######################################################################
-### Use is() to confirm that your logical vector has type logical #####
+### Multiply each element of numeric_vector by three ##################
 #######################################################################
 
 ## write your code here
 
 #######################################################################
-### Create a numeric with five values and assign it to an object ######
-## called numbers #####################################################
-#######################################################################
-
-## write your code here
-
-#######################################################################
-### Add one to each element of the vector numbers #####################
-### that you created above ############################################
-#######################################################################
-
-## write your code here
-
-#######################################################################
-### Multiply each element of the vector numbers by 3 ##################
-### that you created above ############################################
-#######################################################################
-
-## write your code here
-
-#######################################################################
-### Divide each element of the vector numbers by negative 5 ###########
-### that you created above ############################################
+### Divide each element of numeric_vector by negative five ############
 #######################################################################
 
 ## write your code here
 
 #######################################################################
 ### Calculate the average and standard deviation of the numbers in ####
-## the vector "data" ##################################################
-## and add a comment to describe what you did #########################
+## numeric_vector, then and add a comment to describe what you did ####
 #######################################################################
 
-data <- c(43, 75, 99, 234, 546)
+## write your code here
 
 #######################################################################
 ### Use the ? functionality to learn more about the function summary ##
 #######################################################################
+
+## write your code here
