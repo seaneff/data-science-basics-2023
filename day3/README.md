@@ -55,8 +55,12 @@ Descriptive statistics summarize data, and typically describe three types of thi
 ### Explore on your own
 
 [Data to Viz](https://www.data-to-viz.com/)
+
 ["Chart chooser"](https://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html)
+
 [colorbrewer2.org](https://colorbrewer2.org/)
+
 [Thompson, Cara. 2023. Talks](https://www.cararthompson.com/talks)
+
 [#30DayChartChallenge](https://nightingaledvs.com/the-30daychartchallenge-year-three/)
 
