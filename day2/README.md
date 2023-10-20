@@ -92,6 +92,12 @@ In-class discussion (see slides)
 
 ------------------------------------------------------------------------
 
+### (Optional) Exercise
+
+See [exercise folder](https://github.com/seaneff/data-science-basics-2023/tree/main/day2/optional-exercise) for exercise and solutions.
+
+------------------------------------------------------------------------
+
 ## Acknowledgements and References
 
 Much of this material references or is adapted from [Douglas, A et

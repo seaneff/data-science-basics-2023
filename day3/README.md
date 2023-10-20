@@ -50,9 +50,16 @@ Descriptive statistics summarize data, and typically describe three types of thi
 -   best practices
 -   color resources and examples
 
+
 ------------------------------------------------------------------------
 
-### Explore on your own
+### (Optional) Exercise
+
+See [exercise folder](https://github.com/seaneff/data-science-basics-2023/tree/main/day3/optional-exercise) for exercise ideas.
+
+------------------------------------------------------------------------
+
+### Learn more
 
 [Data to Viz](https://www.data-to-viz.com/)
 
